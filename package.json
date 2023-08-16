@@ -1,13 +1,13 @@
 {
   "name": "watermarking",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": "zhounie",
   "license": "MIT",
   "description": "Easily add watermarks to your web pages for branding, copyright protection, and content security.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "files": [
-    "index.js"
+    "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
