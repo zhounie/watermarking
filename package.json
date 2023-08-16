@@ -1,0 +1,28 @@
+{
+  "name": "watermarking",
+  "version": "1.0.0",
+  "author": "zhounie",
+  "license": "MIT",
+  "description": "Easily add watermarks to your web pages for branding, copyright protection, and content security.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "watermark",
+    "web",
+    "front-end",
+    "tool",
+    "utility",
+    "image",
+    "text",
+    "overlay",
+    "protect",
+    "branding",
+    "security",
+    "customization"
+  ]
+}
