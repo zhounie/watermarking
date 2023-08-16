@@ -1,6 +1,7 @@
 {
   "name": "watermarking",
   "version": "1.0.0",
+  "type": "module",
   "author": "zhounie",
   "license": "MIT",
   "description": "Easily add watermarks to your web pages for branding, copyright protection, and content security.",
@@ -9,7 +10,29 @@
     "index.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "examples": "http-server -c-1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/gulp": "^4.0.13",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "http-server": "^14.1.1",
+    "rollup": "^3.28.0",
+    "tslib": "^2.6.1",
+    "typescript": "^5.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhounie/watermarking.git"
   },
   "keywords": [
     "watermark",
