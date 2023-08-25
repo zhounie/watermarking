@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <div id="mark" style="width: 100vw; height: 600vh;">
-        你好,你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好,
-        你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好,
-        <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</p>
-        
+    <title>examples</title>
+    <div id="mark" style="width: 100vw; height: 100vh;">
+        <img src="./book2.jpg" style="width: 400px;" alt="">
+        <button id="removeBtn">remove watermark</button>
     </div>
 </head>
 <body>
@@ -18,12 +16,16 @@
 
 <script async type="module">
     import watermarking from '../dist/index.js'
-    watermarking(document.getElementById('mark'), '你好，我要显示这些水印')
+    const { removeWatermark } = watermarking(document.getElementById('mark'), "Hi, I'm Zhounie, I love you.", {
+        padding: 30,
+        fontSize: 14
+        // rotation: 0
+    })
+    document.getElementById('removeBtn').onclick = removeWatermark
 </script>
 
 <style>
     #mark {
-        /* background-color: pink; */
-        background: pink;
+        position: relative;
     }
 </style>

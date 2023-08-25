@@ -8,6 +8,9 @@ export default defineConfig({
         format: 'module'
     },
     plugins: [
-        typescript()
+        typescript({
+            declaration: true,
+            declarationDir: './dist/types'
+        })
     ]
 })

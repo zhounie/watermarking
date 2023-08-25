@@ -6,6 +6,7 @@
   "license": "MIT",
   "description": "Easily add watermarks to your web pages for branding, copyright protection, and content security.",
   "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
