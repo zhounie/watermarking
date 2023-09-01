@@ -7,10 +7,11 @@ interface Options {
     rotation?: number;
     width?: number;
     height?: number;
+    type?: 'image' | 'text';
 }
-export default function (dom: HTMLElement, content: string, config?: Options): {
+export default function (dom: HTMLElement, content: string, config?: Options): Promise<{
     removeWatermark?: undefined;
 } | {
     removeWatermark: () => void;
-};
+}>;
 export {};

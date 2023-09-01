@@ -38,7 +38,19 @@ watermarking(element, 'Watermark Text', Options);
 
 // Provide remove watermark
 const element = document.getElementById(myElement)
-const { removeWatermark } = watermarking(element, 'Watermark Text', Options);
+const { removeWatermark } = await watermarking(element, 'Watermark Text', Options);
+
+// use image watermark to element.
+const { removeWatermark } = await watermarking(element, './book2.jpg', {
+    padding: 30,
+    fontSize: 14,
+    type: 'image',
+    width: 50,
+    height: 50,
+    opacity: 0.4,
+    rotation: -30
+})
+document.getElementById('removeBtn').onclick = removeWatermark
 
 For more detailed usage instructions and customization options, please refer to the Documentation.
 ```
@@ -54,6 +66,7 @@ interface Options {
     rotation?: number;
     width?: number;
     height?: number;
+    type?: 'text' | 'image';
 }
 ```
 

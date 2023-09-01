@@ -7,6 +7,7 @@
     <div id="mark" style="width: 100vw; height: 100vh;">
         <img src="./book2.jpg" style="width: 400px;" alt="">
         <button id="removeBtn">remove watermark</button>
+        <canvas id="cv"></canvas>
     </div>
 </head>
 <body>
@@ -16,10 +17,14 @@
 
 <script async type="module">
     import watermarking from '../dist/index.js'
-    const { removeWatermark } = watermarking(document.getElementById('mark'), "Hi, I'm Zhounie, I love you.", {
+    const { removeWatermark } = await watermarking(document.getElementById('mark'), './book2.jpg', {
         padding: 30,
-        fontSize: 14
-        // rotation: 0
+        fontSize: 14,
+        type: 'image',
+        width: 50,
+        height: 50,
+        opacity: 0.4,
+        rotation: -30
     })
     document.getElementById('removeBtn').onclick = removeWatermark
 </script>
